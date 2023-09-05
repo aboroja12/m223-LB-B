@@ -25,6 +25,7 @@ public class UserController {
     UserService userService;
 
     @GET
+    @RolesAllowed({"admin", "mitglied"})
     @Produces(MediaType.APPLICATION_JSON)
     @Operation(
         summary = "Index all users.", 
