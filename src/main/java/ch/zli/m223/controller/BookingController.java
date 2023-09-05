@@ -76,6 +76,7 @@ public class BookingController {
 
     @Path("series")
     @POST
+    @RolesAllowed({"mitglied", "admin"})
     @Produces(MediaType.APPLICATION_JSON)
     @Consumes(MediaType.APPLICATION_JSON)
     @Operation(

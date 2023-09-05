@@ -51,6 +51,7 @@ public class UserController {
     @Path("/login")
     @POST
     @Consumes(MediaType.APPLICATION_JSON)
+    @Produces(MediaType.TEXT_PLAIN)
     @Operation(
       summary = "logs user mitglied and admin in", 
       description = "is logging user and admin in"

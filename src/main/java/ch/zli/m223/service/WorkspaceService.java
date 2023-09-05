@@ -3,6 +3,7 @@ import javax.enterprise.context.ApplicationScoped;
 import javax.inject.Inject;
 import java.util.List;
 import javax.persistence.EntityManager;
+import javax.transaction.Transactional;
 
 import ch.zli.m223.model.Workspace;
 
@@ -22,6 +23,10 @@ public class WorkspaceService {
         return query.getResultList();
     }
 
+    @Transactional
+    public Workspace createWorkspace(Workspace workspace) {
+        return entityManager.merge(workspace);
+    }
     
     
 

@@ -8,6 +8,7 @@ import javax.transaction.Transactional;
 
 import ch.zli.m223.model.AppUser;
 import ch.zli.m223.model.Booking;
+import ch.zli.m223.model.Workspace;
 import io.quarkus.runtime.StartupEvent;
 
 @ApplicationScoped
@@ -18,6 +19,9 @@ public class TestDataService {
 
     @Inject
     private BookingService bookingService;
+
+    @Inject
+    private WorkspaceService workspaceService;
 
 
     @Transactional
@@ -52,11 +56,21 @@ public class TestDataService {
         booking2.setIsAccepted(true);
         bookingService.createBooking(booking2);
 
-       
+    
+        Workspace workspace1 = new Workspace();
+        workspace1.setType("conference room");
+        workspace1.setLocation("Zuerich");
+        workspace1.setAvailability(true);
+        workspace1.setFavorite(false);
+        workspaceService.createWorkspace(workspace1);
 
-
-      
-
+        Workspace workspace2 = new Workspace();
+        workspace2.setType("desk table");
+        workspace2.setLocation("Bern");
+        workspace2.setAvailability(true);
+        workspace2.setFavorite(true);
+        workspaceService.createWorkspace(workspace2);
+        
 
     }
 

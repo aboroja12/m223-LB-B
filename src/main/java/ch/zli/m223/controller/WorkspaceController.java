@@ -2,7 +2,9 @@ package ch.zli.m223.controller;
 import java.util.List;
 import javax.annotation.security.RolesAllowed;
 import javax.inject.Inject;
+import javax.ws.rs.Consumes;
 import javax.ws.rs.GET;
+import javax.ws.rs.POST;
 import javax.ws.rs.Path;
 import javax.ws.rs.Produces;
 import javax.ws.rs.core.MediaType;
@@ -43,6 +45,18 @@ public class WorkspaceController {
   public List<Workspace> favoriteList() {
       return workspaceService.favoriteWorkspace();
   }
+
+    @POST
+    @RolesAllowed({"admin"})
+    @Produces(MediaType.APPLICATION_JSON)
+    @Consumes(MediaType.APPLICATION_JSON)
+    @Operation(
+        summary = "Creates a new workspace", 
+        description = "Creates a new workspace and returns the newly added wprkspace."
+    )
+    public Workspace create(Workspace workspace) {
+       return workspaceService.createWorkspace(workspace);
+    }
 
   
 
