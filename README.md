@@ -1,6 +1,6 @@
-# Übungsprojekt: Punch Clock
+# Leistungsbeurteilung B Coworking Tool
 
-Punch Clock ist ein Zeiterfassungssystem, welches mit Quarkus entwickelt wird.
+Dies ist ein Cowrking Tool welches mit Quarkus entwickelt wird.
 
 ## Projekt
 
@@ -21,6 +21,16 @@ Die Daten werden in einer PostgreSQL-Datenbank gespeichert. In der Entwicklungsu
  - Maintenance database: `postgres`
  - Username: `postgres`
  - Password: `postgres`
+
+ ## Login: URL und Benutzername/Passwort
+
+User mit Admin Recht:
+ - email: "Mara.Meier@example.com"
+ - password: "1234" 
+
+ User mit Mitglied Recht:
+ - email: "Alfred.Mueller@example.com"
+ - password: "1234"
 
 ## Automatische Tests
 
