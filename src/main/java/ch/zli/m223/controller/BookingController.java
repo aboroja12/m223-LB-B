@@ -40,7 +40,7 @@ public class BookingController {
   }
 
     @POST
-    @RolesAllowed({"admin", "mitglied"})
+    @RolesAllowed({"mitlgied"})
     @Produces(MediaType.APPLICATION_JSON)
     @Consumes(MediaType.APPLICATION_JSON)
     @Operation(
@@ -53,7 +53,7 @@ public class BookingController {
 
     @Path("/{id}")
     @DELETE
-    @RolesAllowed({"admin", "mitglied"})
+    @RolesAllowed({"mitglied"})
     @Operation(
         summary = "Cancel a booking",
         description = "Deleting a booking by id, so the booking is cancelled"
@@ -65,7 +65,7 @@ public class BookingController {
 
     @Path("/{id}")
     @PUT
-    @RolesAllowed({"admin", "mitglied"})
+    @RolesAllowed({"mitglied"})
     @Operation(
         summary = "Updates a booking",
         description = "Is updating a booking by id"
@@ -76,7 +76,6 @@ public class BookingController {
 
     @Path("series")
     @POST
-    @RolesAllowed({"admin", "mitglied"})
     @Produces(MediaType.APPLICATION_JSON)
     @Consumes(MediaType.APPLICATION_JSON)
     @Operation(

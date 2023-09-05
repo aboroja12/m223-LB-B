@@ -73,7 +73,7 @@ public class AdminController {
       summary = "admin creates an new user", 
       description = "admin creates a new user and returns the newly added user."
   )
-    @PermitAll
+
     public AppUser create(AppUser user) {
         return userService.createUser(user);
   }

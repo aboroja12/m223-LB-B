@@ -3,6 +3,9 @@ import javax.enterprise.context.ApplicationScoped;
 import javax.inject.Inject;
 import java.util.List;
 import javax.persistence.EntityManager;
+import javax.transaction.Transactional;
+
+import ch.zli.m223.model.Booking;
 import ch.zli.m223.model.Workspace;
 
 @ApplicationScoped
@@ -20,7 +23,8 @@ public class WorkspaceService {
         var query = entityManager.createQuery("FROM Workspace WHERE favorite = true", Workspace.class);
         return query.getResultList();
     }
-    
 
+    
+    
 
 }

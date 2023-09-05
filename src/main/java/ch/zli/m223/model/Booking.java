@@ -55,6 +55,7 @@ public class Booking {
 	public void setIsAccepted(Boolean isAccepted) {
 		this.isAccepted = isAccepted;
 	}
+	
 
 
     
