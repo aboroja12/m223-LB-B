@@ -21,6 +21,18 @@ public class BookingWeekday {
 
 
 
+	public Booking getBooking() {
+		return booking;
+	}
+	public void setBooking(Booking booking) {
+		this.booking = booking;
+	}
+	public Weekday getWeekday() {
+		return weekday;
+	}
+	public void setWeekday(Weekday weekday) {
+		this.weekday = weekday;
+	}
 	public Long getId() {
 		return id;
 	}
@@ -39,6 +51,8 @@ public class BookingWeekday {
 	public void setEndDate(Date endDate) {
 		this.endDate = endDate;
 	}
+
+	
 
     
 

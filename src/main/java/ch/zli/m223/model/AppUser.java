@@ -9,7 +9,9 @@ public class AppUser {
     private Long id;
     private String firstName;
     private String lastName;
+	@Column(unique = true)
     private String email;
+	private String password;
     private boolean isAdmin;
 
     
@@ -37,11 +39,18 @@ public class AppUser {
 	public void setEmail(String email) {
 		this.email = email;
 	}
+
 	public boolean isAdmin() {
 		return isAdmin;
 	}
-	public void setAdmin(boolean isAdmin) {
+	public void setIsAdmin(boolean isAdmin) {
 		this.isAdmin = isAdmin;
+	}
+	public String getPassword() {
+		return password;
+	}
+	public void setPassword(String password) {
+		this.password = password;
 	}
 
     
